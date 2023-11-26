@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="px-0 scroll-smooth">
-      <body className="px-0">
+      <body className="px-0 relative">
         <Navbar />
         {children}
         <Link

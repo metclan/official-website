@@ -1,29 +1,36 @@
 "use client";
 //import hooks
 import { useState, useRef, useEffect } from "react";
+import { usePathname } from "next/navigation";
+
 //import icons
 import { BiSolidTime } from "react-icons/bi";
 import { BsFillFileEarmarkSpreadsheetFill } from "react-icons/bs";
+import { BiMenuAltLeft } from "react-icons/bi";
 
 //import next js essentials
 import Image from "next/image";
 import Link from "next/link";
 
 //import icons
-import { CgCloseO } from "react-icons/cg";
-import { LuMenuSquare } from "react-icons/lu";
 import { TbWorld } from "react-icons/tb";
 import { BiLogoBitcoin } from "react-icons/bi";
 import { AiOutlineAntDesign } from "react-icons/ai";
+import { FaPhoneAlt } from "react-icons/fa";
+
 //import components
 import PreNav from "./components/preNav";
+import MenuOptions from "./components/menuOptions";
 
 //import libs
 import { motion, AnimatePresence } from "framer-motion";
+
 export default function Navbar() {
   const [menuIsOpened, setMenuIsOpened] = useState(false);
   const productContainerRef = useRef<HTMLDivElement>(null);
   const serviceContainerRef = useRef<HTMLDivElement>(null);
+  const updatedPath = usePathname();
+  const [currentPath, setCurrentPath] = useState(updatedPath);
   const [isShowingProductOptions, setIsShowingProductOptions] = useState(false);
   const [isShowingServicesOptions, setIsShowingServicesOptions] =
     useState(false);
@@ -102,7 +109,22 @@ export default function Navbar() {
       document.removeEventListener("click", removeOnClick);
     };
   }, [isShowingProductOptions]);
-
+  useEffect(() => {
+    if (menuIsOpened) {
+      document.body.style.overflowY = "hidden";
+    }
+    if (!menuIsOpened) {
+      document.body.style.overflowY = "auto";
+    }
+    const closeMenu = () => {
+      if (updatedPath !== currentPath) {
+        setMenuIsOpened(false);
+        setCurrentPath(updatedPath);
+      }
+    };
+    document.addEventListener("click", closeMenu);
+    return () => document.removeEventListener("click", closeMenu);
+  }, [menuIsOpened, updatedPath]);
   return (
     <>
       <PreNav />
@@ -123,7 +145,7 @@ export default function Navbar() {
                 Metclan
               </span>
             </Link>
-            <ul className="flex gap-10 transition">
+            <ul className="flex gap-10 transition hidden md:flex">
               <li className="relative">
                 <div
                   ref={productContainerRef}
@@ -158,8 +180,7 @@ export default function Navbar() {
                         <li>
                           <Link
                             className="flex items-center gap-2 hover:text-orange-600 transition"
-                            target="_blank"
-                            href="https://attendsure.metclan.com"
+                            href="/stocksavvy"
                           >
                             <div className="text-xl text-orange-600 bg-orange-100 p-1 rounded-full">
                               <BsFillFileEarmarkSpreadsheetFill />
@@ -281,21 +302,24 @@ export default function Navbar() {
               </li>
             </ul>
             <div>
-              {menuIsOpened ? (
-                <CgCloseO
-                  className="text-pink-600 text-4xl cursor-pointer"
-                  onClick={handleMenu}
-                />
-              ) : (
-                <LuMenuSquare
-                  className="text-pink-600 text-4xl cursor-pointer"
-                  onClick={handleMenu}
-                />
-              )}
+              <BiMenuAltLeft
+                className="text-pink-600 text-4xl cursor-pointer md:hidden"
+                onClick={handleMenu}
+              />
             </div>
+            <Link
+              className="bg-orange-500 text-sm px-4 py-2 sm:px-6 sm:py-3 rounded-[5px] text-white transition hover:bg-orange-600 md:py-3 md:px-10 flex items-center gap-2 w-max hidden md:flex"
+              target="_blank"
+              href="https://calendly.com/metclan/15min"
+            >
+              <FaPhoneAlt className="text-xl" />
+              <span>Book Now</span>
+            </Link>
           </div>
         </div>
-        {/* <MenuOptions /> */}
+        {menuIsOpened && (
+          <MenuOptions handleClose={() => setMenuIsOpened(false)} />
+        )}
       </nav>
     </>
   );

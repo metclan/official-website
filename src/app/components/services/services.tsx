@@ -8,7 +8,7 @@ import { useInView, useAnimation } from "framer-motion";
 import ServiceCard from "./components/servicecard/servicescard";
 
 //import services
-let animationDuration = 0.24;
+let animationDuration = 0.1;
 import { services } from "../../../../constants/constants";
 export default function Services() {
   const servicesData: Service[] = services;

@@ -58,10 +58,7 @@ export default function Footer() {
             <h5 className="text-white font-semibold mb-1">Products</h5>
             <ul>
               <li>
-                <Link
-                  href="https://stocksavvy.metclan.com"
-                  className="text-sm text-white"
-                >
+                <Link href="/stocksavvy" className="text-sm text-white">
                   Stocksavvy
                 </Link>
               </li>

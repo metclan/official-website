@@ -12,7 +12,8 @@ export default function Hero() {
         </p>
         <div className="border-2 border-white py-2 sm:py-3 rounded-[5px] md:py-4 shadow-lg inline">
           <Link
-            href="/"
+            target="_blank"
+            href="https://calendly.com/metclan/15min"
             className="bg-orange-500 text-sm px-4 py-2 sm:px-6 sm:py-3 rounded-[5px] mt-4 text-white inline-block transition hover:bg-orange-60 sm:translate-y-[-10px] sm:hover:translate-y-0 md:py-4 md:px-10"
           >
             Schedule a session

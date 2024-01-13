@@ -253,7 +253,7 @@ export default function Navbar() {
                             </span>
                           </Link>
                         </li>
-                        <li>
+                        {/* <li>
                           <Link
                             className="flex items-center gap-2 hover:text-orange-600 transition"
                             href="/services/blockchain-development"
@@ -265,7 +265,7 @@ export default function Navbar() {
                               Blockchain Development
                             </span>
                           </Link>
-                        </li>
+                        </li> */}
                         <li>
                           <Link
                             className="flex items-center gap-2 hover:text-orange-600 transition"

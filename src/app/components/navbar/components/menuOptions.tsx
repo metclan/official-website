@@ -123,14 +123,14 @@ export default function MenuOptions({ handleClose }: Props) {
                     UI/UX Development
                   </Link>
                 </li>
-                <li className="mb-1">
+                {/* <li className="mb-1">
                   <Link
                     href={"/services/blockchain-development"}
                     className="text-[14px] text-gray-600 hover:text-gray-800"
                   >
                     Blockchain Development
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </li>
             <li>

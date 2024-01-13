@@ -27,11 +27,11 @@ export default function Footer() {
                   Web Development
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/" className="text-white text-sm">
                   Blockchain Development
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div>

@@ -95,7 +95,7 @@ export default function MenuOptions({ handleClose }: Props) {
                 <div className="text-sm text-orange-600 bg-orange-100 p-2 rounded-full">
                   <FaBlog />
                 </div>
-                <p className="font-medium text-black">Blog</p>
+                <p className="font-medium text-black">Blogs</p>
               </Link>
             </li>
             <li>

@@ -287,7 +287,7 @@ export default function Navbar() {
               <li>
                 <Link
                   className="font-medium text-gray-700 text-sm hover:text-orange-700 transition"
-                  href="/"
+                  href="/blogs"
                 >
                   Blogs
                 </Link>

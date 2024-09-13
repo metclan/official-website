@@ -74,18 +74,10 @@ export default function MenuOptions({ handleClose }: Props) {
               <ul className="mt-2 ml-10">
                 <li className="mb-1">
                   <Link
-                    href={"/stocksavvy"}
+                    href={"https://www.stocksavvy.io"}
                     className="text-[14px] text-gray-600 hover:text-gray-800"
                   >
-                    Stocksavvy(Bookkeeping software)
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={"/stocksavvy"}
-                    className="text-[14px] text-gray-600 hover:text-gray-800"
-                  >
-                    Attendsure
+                    Stocksavvy
                   </Link>
                 </li>
               </ul>

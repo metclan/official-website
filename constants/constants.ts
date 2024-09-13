@@ -43,6 +43,7 @@ export const navRoutes: NavRoute[] = [
       { name: "About us", directories: "/about", isDropdown: false },
       { name: "Contact us", directories: "/contact", isDropdown: false },
       { name: "Our mission", directories: "/mission", isDropdown: false },
+
     ],
     isDropdown: true,
   },

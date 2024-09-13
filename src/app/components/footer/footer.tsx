@@ -52,22 +52,21 @@ export default function Footer() {
                   Contact us
                 </Link>
               </li>
+              <li>
+                <Link href="/career" className="text-white text-sm">
+                  Career
+                </Link>
+              </li>
             </ul>
           </div>
           <div>
             <h5 className="text-white font-semibold mb-1">Products</h5>
             <ul>
               <li>
-                <Link href="/stocksavvy" className="text-sm text-white">
+                <Link 
+                  target="_blank"
+                href="https://www.stocksavvy.io" className="text-sm text-white">
                   Stocksavvy
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="https://attendsure.metclan.com"
-                  className="text-sm text-white"
-                >
-                  Attendsure
                 </Link>
               </li>
             </ul>

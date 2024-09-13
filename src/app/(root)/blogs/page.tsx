@@ -1,6 +1,6 @@
 //import components
 import BlogCard from "./components/blogCard/blogCard";
-import { sanityClient } from "@/app/lib/sanityClient";
+import { sanityClient } from "@/app/(root)/lib/sanityClient";
 
 export const revalidate = 30; // revalidate at most every seconds
 export const metadata = {

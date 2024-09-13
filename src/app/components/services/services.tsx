@@ -9,7 +9,7 @@ import ServiceCard from "./components/servicecard/servicescard";
 
 //import services
 let animationDuration = 0.1;
-import { services } from "../../../../constants/constants";
+import {services} from "../../../../constants/constants"
 export default function Services() {
   const servicesData: Service[] = services;
   const content = servicesData.map((service) => {

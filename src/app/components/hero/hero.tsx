@@ -4,7 +4,7 @@ export default function Hero() {
     <section className="bg-hero bg-cover bg-center w-full h-96 py-8 sm:h-[500px] transition md:h-[700px] border border-transparent">
       <div className="w-[90%] mx-auto">
         <h4 className="text-white text-4xl mt-10 sm:mt-20 font-medium sm:text-5xl sm:mt-24 md:text-7xl md:font-semibold shadow">
-          Pain Point Nexus
+          Metclan Technologies
         </h4>
         <p className="text-sm mt-4 text-white mb-4 sm:text-xl sm:mb-8">
           Improving your business with cutting-edge and <br />

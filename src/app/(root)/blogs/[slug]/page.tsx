@@ -1,5 +1,5 @@
-import { sanityClient } from "@/app/lib/sanityClient";
-import { urlFor } from "@/app/lib/sanityClient";
+import { sanityClient } from "@/app/(root)/lib/sanityClient";
+import { urlFor } from "@/app/(root)/lib/sanityClient";
 import { Metadata } from "next";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";

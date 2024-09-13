@@ -165,7 +165,7 @@ export default function Navbar() {
                       initial={"hidden"}
                       animate={"visible"}
                       exit={"exit"}
-                      className="absolute bg-white w-80 h-40 rounded-lg p-6 shadow-lg"
+                      className="absolute bg-white w-80 py-6 rounded-lg p-6 shadow-lg"
                     >
                       <motion.ul
                         variants={{
@@ -180,27 +180,14 @@ export default function Navbar() {
                         <li>
                           <Link
                             className="flex items-center gap-2 hover:text-orange-600 transition"
-                            href="/stocksavvy"
+                            target="_blank"
+                            href="https://www.stocksavvy.io"
                           >
                             <div className="text-xl text-orange-600 bg-orange-100 p-1 rounded-full">
                               <BsFillFileEarmarkSpreadsheetFill />
                             </div>
                             <span className="text-sm font-medium">
                               Stocksavvy
-                            </span>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="flex items-center gap-2 hover:text-orange-600 transition"
-                            target="_blank"
-                            href="https://attendsure.metclan.com"
-                          >
-                            <div className="text-xl text-orange-600 bg-orange-100 p-1 rounded-full">
-                              <BiSolidTime />
-                            </div>
-                            <span className="text-sm font-medium">
-                              Attendsure
                             </span>
                           </Link>
                         </li>

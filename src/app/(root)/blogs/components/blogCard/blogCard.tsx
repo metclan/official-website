@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 //import libs
-import { urlFor } from "@/app/lib/sanityClient";
+import { urlFor } from "@/app/(root)/lib/sanityClient";
 import dateFormat from "dateformat";
 
 //import icons & components
